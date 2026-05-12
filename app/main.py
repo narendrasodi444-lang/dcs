@@ -24,3 +24,14 @@ async def download():
 
 	except Exception as e:
 		raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/eslive/t/YuAy/980E5781")
+async def download2():
+	try:
+
+		doc_path = "static/CEI-EWP_2025_06917.pdf"
+
+		return FileResponse(doc_path, media_type="application/pdf", filename="CEI-EWP_2025_06917.pdf")
+
+	except Exception as e:
+		raise HTTPException(status_code=500, detail=str(e))
